@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DICE GAME: ROLL FOR LUCK!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎲 DICE GAME: ROLL FOR LUCK!</h1>
+
+    <div class="controls">
+      <label>
+        Players:
+        <select id="player-count">
+          <option value="1">1</option>
+          <option value="2" selected>2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </label>
+      <label>
+        Throws each:
+        <input type="number" id="throws-count" min="1" max="10" value="5" />
+      </label>
+      <button id="start-button">Start Game</button>
+    </div>
+
+    <div id="game-area" class="hidden">
+      <div class="status-bar">
+        <span id="current-player">Player 1</span>
+        <span id="throws-remaining">Throws left: 5</span>
+      </div>
+
+      <div class="dice" id="dice">
+        <img src="images/dice1.jpg" alt="Dice" id="dice-image" />
+      </div>
+      <button id="roll-button">Roll Dice</button>
+
+      <div id="scoreboards"></div>
+    </div>
+  </div>
+
+  <!-- 🎵 Dice roll sound -->
+  <audio id="roll-sound" src="https://freesound.org/data/previews/341/341695_3248244-lq.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
