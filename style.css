@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0fb9df, #1ac0ee);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.container {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  width: 150%;
+  max-width: 500px;
+  text-align: center;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.controls label {
+  font-size: 0.9rem;
+  color: #34495e;
+}
+
+.controls select,
+.controls input {
+  margin-left: 0.3rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 5px;
+  border: 1px solid #bdc3c7;
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+button:hover {
+  background: #d35400;
+  transform: scale(1.05);
+}
+
+.hidden {
+  display: none;
+}
+
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.dice {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1rem;
+  perspective: 800px;
+  background: #f4f7f8;
+  border-radius: 12px;
+  padding: 0.5rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.dice img {
+  width: 100%;
+  animation: roll 2s;
+}
+
+@keyframes roll {
+  0%   { transform: rotateX(0deg) rotateY(0deg); }
+  25%  { transform: rotateX(360deg) rotateY(180deg); }
+  50%  { transform: rotateX(720deg) rotateY(360deg); }
+  75%  { transform: rotateX(1080deg) rotateY(540deg); }
+  100% { transform: rotateX(1440deg) rotateY(720deg); }
+}
+
+#scoreboards {
+  margin-top: 1.5rem;
+}
+
+.scoreboard {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.scoreboard h3 {
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.scoreboard ul {
+  list-style: none;
+}
+
+.scoreboard li {
+  padding: 0.2rem 0;
+  font-size: 0.9rem;
+}
